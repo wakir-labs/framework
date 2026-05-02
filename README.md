@@ -1,28 +1,37 @@
-# Wakir Framework
+# Wakir Labs — Framework
 
-> Humans as first-class roles in AI-agent systems.
+> Accountable multi-agent systems, a framework for AI-first organizations.
 
-**Wakir Labs** — https://wakirlabs.com
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 
-## What is this?
+`wakir-labs/framework` is the Apache-2.0 core of the Wakir agent
+framework. Most multi-agent frameworks treat humans as an emergency
+exit — a fallback when the agents get confused. We design the other
+way around. People are first-class roles in the workflow, with their
+own primitives for approval, hand-off, and audit. The Arabic word
+*wakīl* (وكيل) means "an appointed representative, an agent in the
+legal sense": someone is named, someone is accountable, and the
+relationship is documented. That is the standard the framework holds
+itself to.
 
-`wakir-labs/framework` is the Apache-2.0 core of the Wakir agent framework.
-Phase 1 ships the **kernel primitives** specified in ADR-0012:
+The framework gives you a small, opinionated set of primitives — Role,
+Task, Routing, Boundary, and an audit-event stream — that lets you
+wire humans and AI agents into the same workflow without writing a
+custom approval pipeline for every project. Identity is signed and
+verifiable. Hand-offs are typed. The audit trail is part of the
+architecture, not bolted-on logging. The Phase-1 scope is the smallest
+set of primitives that lets a real multi-agent organization run for a
+quarter without bypassing the framework.
 
-- **Role** — first-class roles for both humans and AI agents.
-- **Task** — work units routed by role, not by agent identity.
-- **Audit-Trail** — every state change leaves a verifiable record.
-- **Routing** — pluggable dispatch between roles (sync, async, scheduled).
-- **Boundaries** — explicit authority and budget envelopes per role.
-
-The Phase-1 goal is the smallest set of primitives that lets a real
-multi-agent organization run for a quarter without bypassing the
-framework. Everything else (planners, optimizers, fancy memory) is
-Phase 2 or later.
+The core is licensed under Apache 2.0. Operational and compliance
+modules sit on top under BSL with an automatic four-year convert to
+Apache 2.0. We publish what we learn as we build it; the canonical
+home is [wakirlabs.com](https://wakirlabs.com).
 
 ## Status
 
-Pre-alpha scaffold. Not yet usable.
+Phase 1 — early. Kernel primitives in design. Not yet usable as a
+dependency. We are not pretending otherwise.
 
 ## License
 
@@ -30,6 +39,5 @@ Licensed under the Apache License, Version 2.0. See [LICENSE](LICENSE).
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md). The framework treats humans as
-first-class roles and requires audit-trail conformance for every
-contribution that touches the kernel.
+See [CONTRIBUTING.md](CONTRIBUTING.md). Pronounced *Wa-keer Labs* in
+English, *Wa-kir Labs* auf Deutsch.
